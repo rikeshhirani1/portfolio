@@ -38,6 +38,10 @@
                     });
 
                 }).resize();
+                
+                window.addEventListener("hashchange", function () {
+                    window.scrollTo(window.scrollX, window.scrollY - 45);
+                });
             });
         </script>
     </head>
@@ -56,9 +60,8 @@
 
             <ul class="nav navbar-nav">
               <li class=""><a href="#HDS">Hyper Driving School</a></li>
-              <li><a href="#UCLProject1">UCL Project 1</a></li>
+              <li><a href="#UCLProject1">UCL Final Project</a></li>
               <li><a href="#UCLProject2">UCL Coding Curriculum</a></li>
-              <li><a href="#">Coding Curriculum</a></li>
             </ul>
           </div>
               </div>
