@@ -1,12 +1,206 @@
 <!DOCTYPE html>
-<html>
-<head>
-<title>RH Portfolio</title>
-</head>
-<body>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>RH Portfolio</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-</body>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- CSS Stylesheet-->
+        <link rel="stylesheet" href="StyleSheet.css">
+
+        <!-- scrollReveal library 
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>-->
+        <script>
+            $(document).ready(function () {
+                //Responsive Video Resize to Container Height
+                $(window).resize(function () {
+                    var $video = $('video');
+                    var width = $(window).width();
+                    var portfolioBoxHeight = $('#portfolio2').height() + 10;
+                    var resizeHeight = 0;
+
+                    if (width <= 1290 && width >= 950) {
+                        resizeHeight = portfolioBoxHeight;
+                    }
+                    else {
+                        resizeHeight = '350px';
+                    }
+
+                    $video.css({
+                        'height': resizeHeight
+                    });
+
+                }).resize();
+            });
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span> 
+                  </button>
+                  <a id="webHeader" class="navbar-brand" href="#">RH Portfolio</a>
+                </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+            <ul class="nav navbar-nav">
+              <li class=""><a href="#HDS">Hyper Driving School</a></li>
+              <li><a href="#UCLProject1">UCL Project 1</a></li>
+              <li><a href="#UCLProject2">UCL Coding Curriculum</a></li>
+              <li><a href="#">Coding Curriculum</a></li>
+            </ul>
+          </div>
+              </div>
+        </nav>
+        <div class="container-fluid">
+
+
+         <div class="row" id="HDS">
+            <div class="col-md-6 portfolioTxt"  id="portfolio1">
+                <h2>Hyper Driving School</h2><br>
+                    <p>The aim of this website is to advertise the client business and services. <br>
+                       The website is fully responsive to ensure optimal user experience and current technology requirements are met, 
+                        whereby the website display works well across different screen sizes and various platforms. 
+                       
+                    <br><br>
+                    <b>Technologies and Services Used:</b><br>
+                    HTML5, CSS, Bootstrap, JavaScript, jQuery, Google Analytics.
+                    <br><br>
+                    <span class="glyphicon glyphicon-link"></span> <b>URL:</b>
+                    <a  id="portfolio1" target="_blank" href="http://hyperdrivingschool.co.uk/">www.hyperdrivingschool.co.uk</a>
+                    
+                    </p>
+                    <p id="txtRight">
+                        <b>[ SEPT 2016 ] </b>
+                    </p>
+                </div>
+            <div class="col-md-6 portfolioBox">
+                 <div id="portfolioCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#portfolioCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#portfolioCarousel" data-slide-to="1"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img class="portfolioImg" src="img/HyperDrivingSchDesktop.jpg" alt="Hyper Driving School Desktop Screenshot" style="width: 100%;">
+                      </div>
+
+                      <div class="item">
+                        <img class="portfolioImg" src="img/HyperDrivingSchMobile.jpg" alt="Hyper Driving School Mobile Screenshot">
+                      </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#portfolioCarousel" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#portfolioCarousel" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+            </div>
+          
+        </div>
+
+        <div class="row" id="UCLProject1">
+
+            <div class="col-md-6 portfolioTxt" id="portfolio2">
+                <h2>User Behaviour Analytics Tool</h2><br>
+                    <p id="portfolioTxt2"> The aim of this university project was to develop a library that can track user’s interactions within a website. 
+                        The data was available to be viewed and interpreted using visualisations. 
+                        Data recorded included the user’s page navigation route, 
+                        mouse cursor movement and mouse clicks (pointer placement). 
+                        The data gathered and visualised aided developers to improve user experience 
+                        and optimise their website dependent on how users interact with their website.<br>
+                        Responsive data visualisations were created using HTML5 Canvas for each recorded metric.
+                        <br><br>
+                        <b>Technologies and Services Used:</b><br>
+                        Node.js, Express, JavaScript, jQuery, HTML, Bootstrap, MongoDB, GitHub and Mocha.
+                        <br><br>
+                        <span class="glyphicon glyphicon-link"></span> <b>URL: </b>
+                        <a href="#" id="portfolio2"><i>Preview unavailable due to Project Requirements</i></a>
+                    </p>
+                    <p id="txtRight">
+                        <b>[ OCT 2016 – MAY 2017 ] </b>
+                    </p>
+            </div>
+            <div class="col-md-6 portfolioBox" id="portfolioBox2">
+
+                                    <video class="projectVideo" controls loop autoplay muted>
+                    <source src="ProjectVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+            </div>
+          
+        </div>
+        
+        <div class="row" id="UCLProject2">
+            <div class="col-md-6 portfolioTxt"  id="portfolio3">
+                <h2>UCL Coding Curriculum</h2><br>
+                    <p>
+                        This Bootstrap themed website showcased work conducted by first year UCL Computer Science students. <br>
+                        <br>
+                        <b>Technologies and Services Used:</b><br>
+                        HTML5, CSS, Bootstrap, JavaScript and jQuery.
+                        <br><br>
+                        <span class="glyphicon glyphicon-link"></span> <b>URL:</b>
+                    <a id="portfolio3" target="_blank" href="http://hyperdrivingschool.co.uk/">www.hyperdrivingschool.co.uk</a>
+                    </p>
+                    <p id="txtRight">
+                        <b>[ JUNE 2015 – SEPT 2015 ] </b>
+                    </p>
+            </div>
+            <div class="col-md-6 portfolioBox">
+                 <div id="portfolioCarousel2" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#portfolioCarousel2" data-slide-to="0" class="active"></li>
+                      <li data-target="#portfolioCarousel2" data-slide-to="1"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img class="portfolioImg" src="img/codingDesktop.jpg" alt="Hyper Driving School Desktop Screenshot" style="width: 100%;">
+                      </div>
+
+                      <div class="item">
+                        <img class="portfolioImg" src="img/codingMobile.jpg" alt="Hyper Driving School Mobile Screenshot">
+                      </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#portfolioCarousel2" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#portfolioCarousel2" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+            </div>
+          
+        </div>
+        
+    </div>
+
+    </body>
 </html>
